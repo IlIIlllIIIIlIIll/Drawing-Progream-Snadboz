@@ -1,14 +1,11 @@
 //Global Variables
-float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight;
+float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight, drawingDiameter;
 Boolean draw=false;
 
 void setup() {
   size (500, 600); //fullScreen(), dispayWidth, displayHeight
   population();
-  drawingSurfaceX = width*0;
-  drawingSurfaceY = height*0;
-  drawingSurfaceWidth = width*3/4;
-  drawingSurfaceHeight = height*4/5;
+  drawingDiameter = width*1/100; //Needed for ellipses
   //
   rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
 }//End setup()
@@ -16,7 +13,7 @@ void setup() {
 void draw() {
   if ( draw == true )
   {
-    line(mouseX, mouseY, pmouseX, pmouseY);
+    ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter); //This code-line is for line vs. circle
   }//End line draw
 }//End draw()
 
