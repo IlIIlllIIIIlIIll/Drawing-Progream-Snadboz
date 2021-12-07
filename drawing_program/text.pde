@@ -1,5 +1,9 @@
 //Global Variable
 
-void textQuitButton() {}//End textQuitButton
+void textQuitButton() {
 
-void text() {}//End text()
+}//End textQuitButton
+
+void text() {
+
+}//End text()
