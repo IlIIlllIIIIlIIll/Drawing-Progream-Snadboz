@@ -6,12 +6,13 @@ void setup() {
   size (500, 600); //fullScreen(), dispayWidth, displayHeight
   population();
   quitButtonSetup(); //Contains Separate Population
+  textSetup();
   //
   rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
 }//End setup()
 
 void draw() {
-  quitButtonDraw();
+  //quitButtonDraw();
   if ( draw == true && mouseX>drawingSurfaceX && mouseX<drawingSurfaceX+drawingSurfaceWidth && mouseY>drawingSurfaceY && mouseY<drawingSurfaceY+drawingSurfaceHeight)
   {
     ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter); //This code-line is for line vs. circle
