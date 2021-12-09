@@ -5,19 +5,23 @@ Boolean draw=false;
 void setup() {
   size (500, 600); //fullScreen(), dispayWidth, displayHeight
   population();
-  drawingDiameter = width*1/100; //Needed for ellipses
+  quitButtonSetup(); //Contains Separate Population
   //
   rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
 }//End setup()
 
 void draw() {
-  if ( draw == true )
+  quitButtonDraw();
+  if ( draw == true && mouseX>drawingSurfaceX && mouseX<drawingSurfaceX+drawingSurfaceWidth && mouseY>drawingSurfaceY && mouseY<drawingSurfaceY+drawingSurfaceHeight)
   {
     ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter); //This code-line is for line vs. circle
   }//End line draw
 }//End draw()
 
 void mousePressed() {
+  //
+  quitButtonMousePressed();
+  //
   if ( mouseX>drawingSurfaceX && mouseX<drawingSurfaceX+drawingSurfaceWidth && mouseY>drawingSurfaceY && mouseY<drawingSurfaceY+drawingSurfaceHeight )
   {
     if (draw == false)
@@ -27,6 +31,7 @@ void mousePressed() {
       draw = false;
     }//End draw boolean
   }//End line draw
+  
 }//End mousePressed()
 
 void keyPressed() {
