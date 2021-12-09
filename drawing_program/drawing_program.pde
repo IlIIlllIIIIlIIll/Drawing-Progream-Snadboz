@@ -12,7 +12,7 @@ void setup() {
 }//End setup()
 
 void draw() {
-  //quitButtonDraw();
+  quitButtonDraw();
   if ( draw == true && mouseX>drawingSurfaceX && mouseX<drawingSurfaceX+drawingSurfaceWidth && mouseY>drawingSurfaceY && mouseY<drawingSurfaceY+drawingSurfaceHeight)
   {
     ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter); //This code-line is for line vs. circle

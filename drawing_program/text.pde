@@ -8,6 +8,7 @@
 PFont font; //Font Type
 //Initial Size
 //Black Ink, see QuitButton Global Variables
+color white=#FFFFFF; //reset INK
 
 void textSetup() {
   //println("Start of Console");
@@ -18,7 +19,7 @@ void textSetup() {
   font = createFont ("Harrington", 55); //Verify font exists
   //Tools / Create Font / Find Font / Do Not Press "OK", known bug
   //Layout with a rect(); Variables copied to text();
-  //rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
+  rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
 }//End textSetup()
 
 //Code to be repeated instead of copied and pasted
@@ -30,7 +31,7 @@ void textCode(String string, int size, float rectX, float rectY, float rectWidth
   //textFont() has option to combine font declaration with textSize()
   //Drawing Text
   text(string, rectX, rectY, rectWidth, rectHeight);
-  fill(whiteInk); //reset
+  fill(white); //reset
 }//End textCode()
 
 /* Code from Text-Lesson to copy above

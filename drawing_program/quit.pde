@@ -14,7 +14,7 @@ void quitButtonSetup()
 {
   quitButtonX = width*18/20;
   quitButtonY = height*0;
-  quitButtonWidth = width*1/4;
+  quitButtonWidth = width*2/20;
   quitButtonHeight = height*1/20;
 }//End quitButtonSetup()
 
@@ -30,6 +30,7 @@ void quitButtonDraw()
   noStroke(); //removes rect() outline
   rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
   stroke(reset);
+  textCode(quitButton, 25, quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
 }//End quitButtonDraw()
 
 void quitButtonMousePressed()
